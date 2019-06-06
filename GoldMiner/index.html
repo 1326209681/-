@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>weijun的码云静态网页</title>
+</head>
+<body>
+    <h2>
+        等待<span id="span">3</span>秒,<a href="hjkg/index.html">立即跳转</a>
+    </h2>
+</body>
+<script type="text/javascript">
+    var num = 3;
+    var timer = setInterval(function(){
+        if(num <= 0){
+            clearInterval(timer);
+            location.href = "hjkg/index.html";
+        }
+        document.getElementById('span').innerHTML = num;
+        num--;
+    },1000)
+</script>
+</html>
